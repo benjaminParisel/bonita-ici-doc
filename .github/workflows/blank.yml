@@ -22,6 +22,6 @@ jobs:
         with:          
           workflow: Generate documentation          
           token: ${{secrets.GH_LABS_TOKEN}}          
-          inputs: '{ "branch": ${{steps.extract_branch.outputs.branch}} }'          
+          inputs: '{ "branch": "${{steps.extract_branch.outputs.branch}}" }'          
           ref: master          
           repo: benjaminParisel/bonitasoft.github.io
