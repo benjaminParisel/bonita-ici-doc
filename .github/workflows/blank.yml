@@ -21,7 +21,8 @@ jobs:
         uses: benc-uk/workflow-dispatch@v1.1
         with:          
           workflow: Generate documentation          
-          token: ${{secrets.GH_LABS_TOKEN}}          
-          inputs: '{ "branch": "${{steps.extract_branch.outputs.branch}}" }'          
+          token: ${{secrets.GH_LABS_TOKEN}}         
+          # Add input as json format to match with workflow triggered config
+          #inputs: '{ "branch": "${{steps.extract_branch.outputs.branch}}" }'          
           ref: master          
           repo: benjaminParisel/bonitasoft.github.io
